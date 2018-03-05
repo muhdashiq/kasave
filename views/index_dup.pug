@@ -1,0 +1,151 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} online membership registration portal beta. Please do fill the details as follows.
+
+  form.form-horizontal
+  fieldset
+    // Form Name
+    legend kasave membership form
+    // Text input
+    .form-group
+      label.col-md-4.control-label(for='name') Name
+      .col-md-4
+        input#name.form-control.input-md(name='name', type='text', placeholder='Your name please')
+        span.help-block help
+    // Text input
+    .form-group
+      label.col-md-4.control-label(for='address') Address
+      .col-md-4
+        input#address.form-control.input-md(name='address', type='text', placeholder='Address', required='')
+        span.help-block help
+    // Multiple Radios (inline)
+    .form-group
+      label.col-md-4.control-label(for='gender') Gender
+      .col-md-4
+        label.radio-inline(for='gender-0')
+          input#gender-0(type='radio', name='gender', value='Male', checked='checked')
+          |       Male
+        label.radio-inline(for='gender-1')
+          input#gender-1(type='radio', name='gender', value='Female')
+          |       Female
+    // Text input
+    .form-group
+      label.col-md-4.control-label(for='email') Email
+      .col-md-4
+        input#email.form-control.input-md(name='email', type='text', placeholder='mail@address.com')
+        span.help-block help
+    // Select Basic
+    .form-group
+      label.col-md-4.control-label(for='panjayath') Panjayath
+      .col-md-4
+        select#panjayath.form-control(name='panjayath')
+          option(value='Peruvallur') Peruvallur
+          option(value='Kannamangalam') Kannamangalam
+          option(value='Pallikkal') Pallikkal
+    // Select Basic
+    .form-group
+      label.col-md-4.control-label(for='ward') Ward No#
+      .col-md-4
+        select#ward.form-control(name='ward')
+          option(value='1') 1
+          option(value='2') 2
+          option(value='3') 3
+          option(value='4') 4
+          option(value='5') 5
+          option(value='6') 6
+          option(value='7') 7
+          option(value='8') 8
+          option(value='9') 9
+          option(value='10') 10
+          option(value='11') 11
+          option(value='12') 12
+          option(value='13') 13
+          option(value='14') 14
+          option(value='15') 15
+          option(value='16') 16
+          option(value='17') 17
+          option(value='18') 18
+          option(value='19') 19
+          option(value='20') 20
+    // Text input
+    .form-group
+      label.col-md-4.control-label(for='phone') Phone
+      .col-md-4
+        input#phone.form-control.input-md(name='phone', type='text', placeholder='9876543210')
+        span.help-block help
+    // Text input
+    .form-group
+      label.col-md-4.control-label(for='gardian') Gardian Name
+      .col-md-4
+        input#gardian.form-control.input-md(name='gardian', type='text', placeholder='Father / Mother')
+        span.help-block help
+    // Multiple Checkboxes
+    .form-group
+      label.col-md-4.control-label(for='interestedActivities') Interested activities
+      .col-md-4
+        .checkbox
+          label(for='interestedActivities-0')
+            input#interestedActivities-0(type='checkbox', name='interestedActivities', value='Sports')
+            |       Sports
+        .checkbox
+          label(for='interestedActivities-1')
+            input#interestedActivities-1(type='checkbox', name='interestedActivities', value='Games')
+            |       Games
+        .checkbox
+          label(for='interestedActivities-2')
+            input#interestedActivities-2(type='checkbox', name='interestedActivities', value='Cultural')
+            |       Cultural
+        .checkbox
+          label(for='interestedActivities-3')
+            input#interestedActivities-3(type='checkbox', name='interestedActivities', value='Art')
+            |       Art
+        .checkbox
+          label(for='interestedActivities-4')
+            input#interestedActivities-4(type='checkbox', name='interestedActivities', value='Voluntary')
+            |       Voluntary
+        .checkbox
+          label(for='interestedActivities-5')
+            input#interestedActivities-5(type='checkbox', name='interestedActivities', value='Charity')
+            |       Charity
+        .checkbox
+          label(for='interestedActivities-6')
+            input#interestedActivities-6(type='checkbox', name='interestedActivities', value='Politrics')
+            |       Politrics
+    // Select Basic
+    .form-group
+      label.col-md-4.control-label(for='education') Educational qualification
+      .col-md-4
+        select#education.form-control(name='education')
+          option(value='LP') LP
+          option(value='UP') UP
+          option(value='SSLC') SSLC
+          option(value='PDC / +2') PDC / +2
+          option(value='Diploma') Diploma
+          option(value='Degree') Degree
+          option(value='Post Graduation') Post Graduation
+    // Select Basic
+    .form-group
+      label.col-md-4.control-label(for='bloodGroup') Blood Group
+      .col-md-4
+        select#bloodGroup.form-control(name='bloodGroup')
+          option(value='O-') O-
+          option(value='O+') O+
+          option(value='A-') A-
+          option(value='A+') A+
+          option(value='B-') B-
+          option(value='B+') B+
+          option(value='AB-') AB-
+          option(value='AB+') AB+
+    // Textarea
+    .form-group
+      label.col-md-4.control-label(for='otherOrganization') Please do specify if your are part of any other organisation.
+      .col-md-4
+        textarea#otherOrganization.form-control(name='otherOrganization')
+    // Button
+    .form-group
+      label.col-md-4.control-label(for='submitButton')
+      .col-md-4
+      input#submitButton.btn.btn-primary(name='submitButton', type='submit')
+      | Submit

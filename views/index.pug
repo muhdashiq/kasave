@@ -1,0 +1,83 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} online membership registration portal beta. Please do fill the details as follows.
+
+  form(action='/membership', method='post')
+    input#name.form-control.input-md(name="name" type="text" placeholder="Your full name" required)
+    input#address.form-control.input-md(name="address" type="text" placeholder="Address" required)
+    input#address.form-control.input-md(name="address2" type="text" placeholder="Address line #2")
+    | Gender:
+    input#gender-0(type="radio" name="gender" value="Male" checked="checked" required)
+    | Male
+    input#gender-1(type="radio" name="gender" value="Female" required)
+    | Female
+    input#email.form-control.input-md(name="email" type="email" placeholder="mail@address.com")
+    select#panjayath.form-control(name="panjayath" required)
+      option Select your Panjayath
+      option(value="Peruvallur") Peruvallur
+      option(value="Kannamangalam") Kannamangalam
+      option(value="Pallikkal") Pallikkal
+    select#ward.form-control(name="ward" required)
+      option Select your Ward
+      option(value="1") 1
+      option(value="2") 2
+      option(value="3") 3
+      option(value="4") 4
+      option(value="5") 5
+      option(value="6") 6
+      option(value="7") 7
+      option(value="8") 8
+      option(value="9") 9
+      option(value="10") 10
+      option(value="11") 11
+      option(value="12") 12
+      option(value="13") 13
+      option(value="14") 14
+      option(value="15") 15
+      option(value="16") 16
+      option(value="17") 17
+      option(value="18") 18
+      option(value="19") 19
+      option(value="20") 20
+    input#phone.form-control.input-md(name="houseNo" type="number" placeholder="House number")
+    input#phone.form-control.input-md(name="mobile" type="phone" placeholder="10 digit mobile number eg: 9876543210" required)
+    input#gardian.form-control.input-md(name="guardian" type="text" placeholder="Name of your father/mother" required)
+    | Interested Activities: [
+    input#interestedActivities-0(type="checkbox" name="interestedActivities" value="Sports")
+    |       Sports ] [
+    input#interestedActivities-1(type="checkbox" name="interestedActivities" value="Games")
+    |       Games ] [
+    input#interestedActivities-2(type="checkbox" name="interestedActivities" value="Cultural")
+    |       Cultural ] [
+    input#interestedActivities-3(type="checkbox" name="interestedActivities" value="Art")
+    |       Art ] [
+    input#interestedActivities-4(type="checkbox" name="interestedActivities" value="Voluntary")
+    |       Voluntary ] [
+    input#interestedActivities-5(type="checkbox" name="interestedActivities" value="Charity")
+    |       Charity  ] [
+    input#interestedActivities-6(type="checkbox" name="interestedActivities" value="Politrics")
+    |       politics ]
+    select#education.form-control(name="education" required)
+      option Educational qualification
+      option(value="LP") LP
+      option(value="UP") UP
+      option(value="SSLC") SSLC
+      option(value="PDC / +2") PDC / +2
+      option(value="Diploma") Diploma
+      option(value="Degree") Degree
+      option(value="Post Graduation") Post Graduation
+    select#bloodGroup.form-control(name="bloodGroup")
+      option Blood group
+      option(value="O-") O-
+      option(value="O+") O+
+      option(value="A-") A-
+      option(value="A+") A+
+      option(value="B-") B-
+      option(value="B+") B+
+      option(value="AB-") AB-
+      option(value="AB+") AB+
+    textarea#otherOrganization.form-control(name='otherOrganisation' placeholder="Please do list the organisation's name(s), if you are a member of similar organisation.")
+    p !{captcha}
+    input(type='submit', value='Register',class='btn btn-primary')
