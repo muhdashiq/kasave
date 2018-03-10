@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>{{titile}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom css-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+
+  <body>
+    {{> headerNavbar}}
+    <div class="container">
+      <div class="card-deck mb-3">
+        <main role="main" class="container">
+          <h1 class="mt-5">{{title}}</h1>
+          <p class="lead">{{message}}</p>
+          <p><a href="/">Click here for the home page.</p>
+        </main>
+      </div>
+      {{> footer}}
+    </div>
+    {{> footerScripts}}
+  </body>
+</html>

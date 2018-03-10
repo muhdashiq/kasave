@@ -1,0 +1,85 @@
+<form action="/membership" method="post">
+    <div class="row">
+        <div class="col-2">Photo</div>
+        <div class="col-8"><input class="form-control input-md" type="file" name="file" id="file" placeholder="Photo" required="required" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Name</div>
+        <div class="col-8"><input class="form-control input-md" id="name" name="name" type="text" placeholder="Your full name" required="required" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Addres</div>
+        <div class="col-8"><input class="form-control input-md" id="address" name="address" type="text" placeholder="Address" required="required" /><input class="form-control input-md" id="address" name="address2" type="text" placeholder="Address line #2" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Gender</div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-2"><input id="gender-0" type="radio" name="gender" value="Male" checked="checked" required="required" />Male</div>
+                <div class="col-2"><input id="gender-1" type="radio" name="gender" value="Female" required="required" />Female</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">Date of birth</div>
+        <div class="col-8"><input class="form-control input-md" id="email" name="dateofbirth" type="date" placeholder="Date of birth (DOB)" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Email</div>
+        <div class="col-8"><input class="form-control input-md" id="email" name="email" type="email" placeholder="mail@address.com" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Panjayath</div>
+        <div class="col-8"><select class="form-control" id="panjayath" name="panjayath" required="required"><option>Select your Panjayath</option><option value="Peruvallur">Peruvallur</option><option value="Kannamangalam">Kannamangalam</option><option value="Pallikkal">Pallikkal</option></select></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Ward</div>
+        <div class="col-8"><select class="form-control" id="ward" name="ward" required="required"><option>Select your Ward</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select></div>
+    </div>
+    <div class="row">
+        <div class="col-2">House no#</div>
+        <div class="col-8"><input class="form-control input-md" id="phone" name="houseNo" type="number" placeholder="House number" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Mobile#</div>
+        <div class="col-8"><input class="form-control input-md" id="phone" name="mobile" type="phone" placeholder="10 digit mobile number eg: 9876543210" required="required" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Guardian</div>
+        <div class="col-8"><input class="form-control input-md" id="gardian" name="guardian" type="text" placeholder="Name of your father/mother" required="required" /></div>
+    </div>
+    <div class="row">
+        <div class="col-3">Interested Activities</div>
+        <div class="col-6">
+            <div class="row"><input id="interestedActivities-0" type="checkbox" name="interestedActivities" value="Sports" />Sports</div>
+            <div class="row"><input id="interestedActivities-1" type="checkbox" name="interestedActivities" value="Games" />Games</div>
+            <div class="row"><input id="interestedActivities-2" type="checkbox" name="interestedActivities" value="Cultural" />Cultural</div>
+            <div class="row"><input id="interestedActivities-3" type="checkbox" name="interestedActivities" value="Art" />Art</div>
+            <div class="row"><input id="interestedActivities-4" type="checkbox" name="interestedActivities" value="Voluntary" />Voluntary</div>
+            <div class="row"><input id="interestedActivities-5" type="checkbox" name="interestedActivities" value="Charity" />Charity</div>
+            <div class="row"><input id="interestedActivities-6" type="checkbox" name="interestedActivities" value="Politrics" />Politics</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">Educational qualification</div>
+        <div class="col-8"><select class="form-control" id="education" name="education" required="required"><option>Educational qualification</option><option value="LP">LP</option><option value="UP">UP</option><option value="SSLC">SSLC</option><option value="PDC / +2">PDC / +2</option><option value="Diploma">Diploma</option><option value="Degree">Degree</option><option value="Post Graduation">Post Graduation</option></select></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Blood group</div>
+        <div class="col-8"><select class="form-control" id="bloodGroup" name="bloodGroup"><option>Blood group</option><option value="O-">O-</option><option value="O+">O+</option><option value="A-">A-</option><option value="A+">A+</option><option value="B-">B-</option><option value="B+">B+</option><option value="AB-">AB-</option><option value="AB+">AB+</option></select></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Additional details</div>
+        <div class="col-8"><textarea class="form-control" id="otherOrganization" name="otherOrganisation" placeholder="Please do list the organisation's name(s), if you are a member of similar organisation."></textarea></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <p>{{{captcha}}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8"><input class="btn btn-primary" type="submit" value="Register" /></div>
+    </div>
+</form>
